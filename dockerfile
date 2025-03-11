@@ -76,9 +76,10 @@ RUN for repo in $CUSTOM_NODES; do \
 WORKDIR /workspace/
 RUN git clone https://github.com/thu-ml/SageAttention.git
 
-# Validate Nginx config before using it
+# Validate config before using it
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY config.ini /workspace/ComfyUI/user/default/ComfyUI-Manager/config.ini
+COPY config.ini /workspace/ComfyUI/user/default/comfy.settings.json
 
 # Copy start script & fix line endings
 COPY start.sh /start.sh
