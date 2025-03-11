@@ -1,0 +1,11 @@
+version: '1.0.0'
+services:
+  - name: 'ComfyUI'
+    port: 7860
+    proxy_port: 7860
+  - name: 'File Browser'
+    port: 8080
+    proxy_port: 8080
+  - name: 'Jupyter Lab'
+    port: 8888
+    proxy_port: 8888
